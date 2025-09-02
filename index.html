@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+
+  <div class="slider">
+  <div class="slides">
+    <img src="https://topsystem.id/api/category_slug/banner//1711097844.jpg" alt="Slide 3">
+  </div>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toko Sepatu — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">TokoSepatuG-SPORTS</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Keranjang (<span id="cart-count">0</span>)</a>
+        <a href="about.html">Tentang & Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Sepatu Pilihan — Nyaman & Stylish</h2>
+      <p>Diskon dan promo setiap minggu. Pilih sepatu favoritmu!</p>
+    </section>
+
+    <section>
+      <h3>Produk</h3>
+      <div id="products-grid" class="products-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> TokoSepatu — Semua hak cipta.</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

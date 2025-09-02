@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keranjang & Checkout — Toko Sepatu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">TokoSepatu</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Keranjang (<span id="cart-count">0</span>)</a>
+        <a href="about.html">Tentang & Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Keranjang Belanja</h2>
+    <div id="cart-items" class="cart-items"></div>
+
+    <aside class="checkout-box">
+      <h3>Ringkasan Pesanan</h3>
+      <p>Subtotal: Rp <span id="subtotal">0</span></p>
+      <p>Ongkos Kirim: Rp <span id="shipping">0</span> (flat)</p>
+      <p><strong>Total: Rp <span id="total">0</span></strong></p>
+      <hr />
+      <h4>Data Pemesan</h4>
+      <form id="checkout-form">
+        <label>Nama lengkap<input required type="text" id="name" /></label>
+        <label>Email<input required type="email" id="email" /></label>
+        <label>Alamat<input required type="text" id="address" /></label>
+        <label>Metode Pembayaran
+          <select id="payment">
+            <option value="transfer">Transfer Bank</option>
+            <option value="cod">COD (Bayar di tempat)</option>
+            <option value="e-wallet">E-Wallet</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Checkout & Bayar</button>
+      </form>
+      <div id="checkout-message" class="notice"></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year3"></span> TokoSepatu</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+    loadCartPage();
+  </script>
+</body>
+</html>
